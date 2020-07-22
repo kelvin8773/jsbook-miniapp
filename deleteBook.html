@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Minimal JS Front-End App Example</title>
+
+    <script src="src/ctrl/initialize.js"></script>
+    <script src="src/model/Book.js"></script>
+    <script src="src/view/deleteBook.js"></script>
+
+    <script>
+      window.addEventListener("load", pl.view.deleteBook.setupUserInterface);
+    </script>
+  </head>
+  <body>
+    <h1>Publich Library: Delete a book record</h1>
+    <form action="" id="Book">
+      <p>
+        <label for="">
+          Select book:
+          <select name="selectBook" id="">
+            <option value=""> --- </option>
+          </select>
+        </label>
+      </p>
+
+      <p><button type="button" name="commit">Delete</button></p>
+    </form>
+
+    <nav><a href="index.html">Back to main menu</a></nav>
+  </body>
+</html>

@@ -44,8 +44,8 @@ Book.convertRow2Obj = function(bookRow) {
 };
 
 Book.update = function(slots) {
-  let book = Book.instances(slots.isbn);
-  let year = parseInt(slot.year);
+  let book = Book.instances[slots.isbn];
+  let year = parseInt(slots.year);
 
   if (book.title !== slots.title) {
     book.title = slots.title;
@@ -56,7 +56,7 @@ Book.update = function(slots) {
   console.log("Book " + slots.isbn + " modifined!");
 };
 
-Book.destroy = function(isbn) {
+Book.destory = function(isbn) {
   if (Book.instances[isbn]) {
     console.log("Book " + isbn + " deleted.");
     delete Book.instances[isbn];
